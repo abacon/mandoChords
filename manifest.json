@@ -6,6 +6,9 @@
   "background": {
     "scripts": ["background.js"]
   },
+  "icons": {
+    "16": "cafe.png"
+  },
   "permissions": [
     "activeTab",
     "tabs",
