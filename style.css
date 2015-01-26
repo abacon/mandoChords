@@ -4,6 +4,8 @@
   font-family: "Marvel", cursive;
   font-size: 20px;
   text-align: center;
+  margin-top: 2px;
+  margin-bottom: -9px;
 }
 .chord, .chord div {
   display: inline;
@@ -15,6 +17,6 @@
 }
 .pinner {
   position: absolute;
-  right: 20px;
+  right: 22px;
   margin-top: 6px;
 }

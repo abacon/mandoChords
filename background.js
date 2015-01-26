@@ -10,10 +10,9 @@ function doMagic() {
   chrome.tabs.executeScript(null, {file: "hoverChords.js"});
 }
 
-
-chrome.browserAction.onClicked.addListener(doMagic);
+//chrome.browserAction.onClicked.addListener(doMagic);
 
 chrome.contextMenus.create({"title": "Mandochord!",
-    "contexts": ["selection", "link"],
+                           "contexts": ["selection", "link"],
                            "onclick": doMagic
 });

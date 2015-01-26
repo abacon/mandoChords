@@ -1,22 +1,15 @@
 {
   "manifest_version": 2,
-
-  "name": "Mandolin Chord Hover",
+  "name": "Mandolin Chord Display",
   "description": "This extension shows a chord diagram for the chord name underneath the cursor",
   "version": "1.0",
-  "browser_action": {
-    "default_icon": "mandolin.jpg",
-    "default_title": "Show me chord diagrams!"
-  },
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "scripts": ["background.js"]
   },
   "permissions": [
     "activeTab",
     "tabs",
     "contextMenus",
-    "http://*/",
-    "https://ajax.googleapis.com/"
+    "http://*/"
   ]
 }
