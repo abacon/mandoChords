@@ -70,11 +70,15 @@ function addChord() {
   var ccdiv = $(ccdivHTML);
 
   $(".chordname", ccdiv).text(selection);
-  var pin = $('<a class="pinner fa fa-unlock-alt" style="cursor: pointer;"></a>');
-  $(".chordname", ccdiv).append(pin);
+  var controls = $('<div class="controls"><a class="pinner fa fa-thumb-tack" style="cursor: pointer;"></a><a class="closer fa fa-times-circle" style="cursor: pointer;"></a></div>');
+  $(".chordname", ccdiv).append(controls);
+  $(".closer", ccdiv).on("click", function(e) {
+    $(e.target)
+      .parents(".mandochord-widget")
+      .remove();
+  });
   $(".pinner", ccdiv).on("click", function(e) {
     $(e.target)
-      .toggleClass("fa-lock fa-unlock-alt")
       .parents(".mandochord-widget")
       .toggleClass("pinned");
   });
@@ -83,7 +87,6 @@ function addChord() {
 
   $("div.chords", ccdiv).append($chords);
   ccdiv.css({top: window.scrollY}).draggable();
-  $(".mandochord-widget:not(.pinned)").remove();
   $("body").append(ccdiv);
 }
 
