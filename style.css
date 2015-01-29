@@ -20,15 +20,15 @@
 .mandochord-widget.pinned {
   position: fixed !important;
 }
-.controls{
-  display: inline-block;
+.controls {
   top: 10px;
   position: absolute;
   right: 22px;
+}
+.controls a, .controls a:hover {
+  padding: 0 4px;
+  display: inline-block;
   font-size: 16px !important;
   color: blue !important;
   text-decoration: none !important;
-}
-.controls a {
-  padding: 0 4px;
 }
